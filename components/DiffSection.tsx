@@ -2,24 +2,25 @@
 
 import PhotoBanner from './PhotoBanner';
 import ScrollReveal from './ScrollReveal';
+import { BookIcon, GradCapIcon, TrophyIcon } from './Icons';
 
 const items = [
   {
     title: 'Learn at Your Own Pace',
     desc: 'Flexible scheduling allows you to progress through material at a speed that suits your lifestyle and commitments.',
-    icon: '📖',
+    icon: BookIcon,
     color: '#7B1A2D',
   },
   {
     title: 'Structured Flexibility',
     desc: 'Our programs combine rigorous academic structure with the freedom to customize your own learning path.',
-    icon: '🎓',
+    icon: GradCapIcon,
     color: '#E5A52E',
   },
   {
     title: 'Best Practice Experience',
     desc: 'Learn from real-world case studies and industry practitioners who bring decades of expertise to the classroom.',
-    icon: '🏆',
+    icon: TrophyIcon,
     color: '#7B1A2D',
   },
 ];
@@ -60,9 +61,9 @@ export default function DiffSection() {
                     width: 56, height: 56, borderRadius: 14,
                     background: item.color + '15',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontSize: 24, marginBottom: 20,
+                    marginBottom: 20,
                   }}>
-                    {item.icon}
+                    <item.icon size={26} color={item.color} />
                   </div>
                   <h3 style={{ fontSize: 20, fontWeight: 600, color: '#1A1A2A', marginBottom: 10 }}>{item.title}</h3>
                   <p style={{ fontSize: 15, color: '#666', lineHeight: 1.6 }}>{item.desc}</p>

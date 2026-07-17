@@ -51,15 +51,6 @@ const courses = [
     desc: 'An entry-level course for individuals wanting to take control of their personal finances and investment portfolio.',
   },
   {
-    cat: 'Certification',
-    img: 'https://mcuinstitute.com/wp-content/uploads/2025/02/AdobeStock_114954721-scaled-1.jpeg',
-    title: 'HKSI Licensing Exam Preparation',
-    level: 'Certification Prep',
-    duration: '4 weeks',
-    format: 'Online',
-    desc: 'Structured preparation for Hong Kong Securities & Investment Institute licensing papers 1, 2, and 3.',
-  },
-  {
     cat: 'Wealth Management',
     img: 'https://mcuinstitute.com/wp-content/uploads/2025/02/on-going-improvement-in-order-to-adapt-to-financial-market-with-uncertainty.png',
     title: 'Alternative Investment Strategies',
@@ -79,13 +70,12 @@ const courses = [
   },
 ];
 
-const categories = ['All', 'Financial Planning', 'Wealth Management', 'Family Office', 'Certification', 'Executive'];
+const categories = ['All', 'Financial Planning', 'Wealth Management', 'Family Office', 'Executive'];
 
 const catColor: Record<string, string> = {
   'Financial Planning': '#2EC4B6',
   'Wealth Management': '#7B1A2D',
   'Family Office': '#E5A52E',
-  'Certification': '#7B1A2D',
   'Executive': '#E5A52E',
 };
 
@@ -103,7 +93,6 @@ export default function CoursesPage() {
 
       <section style={{ padding: '100px 0', background: '#fff' }}>
         <div className="container">
-          {/* Category pills */}
           <ScrollReveal>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', justifyContent: 'center', marginBottom: 56 }}>
               {categories.map((cat) => (
@@ -182,7 +171,6 @@ export default function CoursesPage() {
         </div>
       </section>
 
-      {/* CTA banner */}
       <section style={{ padding: '80px 0', background: '#F8F8FA' }}>
         <div className="container">
           <ScrollReveal>

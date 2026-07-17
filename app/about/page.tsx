@@ -6,11 +6,12 @@ import AchievementsSection from '@/components/AchievementsSection';
 import OrgChart from '@/components/OrgChart';
 import ScrollReveal from '@/components/ScrollReveal';
 import SectionHeading from '@/components/SectionHeading';
+import { TargetIcon, EyeIcon, LightbulbIcon } from '@/components/Icons';
 
 const values = [
-  { icon: '🎯', title: 'Mission', desc: 'To provide world-class financial education that empowers individuals and organizations to achieve sustainable wealth management success.' },
-  { icon: '🔭', title: 'Vision', desc: 'To be the leading financial education institution in Asia, recognized globally for our innovative curriculum and outstanding graduate outcomes.' },
-  { icon: '💡', title: 'Innovation', desc: 'We continuously evolve our programs to reflect real-world market conditions, integrating emerging financial technologies and methodologies.' },
+  { icon: TargetIcon, title: 'Mission', desc: 'To provide world-class financial education that empowers individuals and organizations to achieve sustainable wealth management success.' },
+  { icon: EyeIcon, title: 'Vision', desc: 'To be the leading financial education institution in Asia, recognized globally for our innovative curriculum and outstanding graduate outcomes.' },
+  { icon: LightbulbIcon, title: 'Innovation', desc: 'We continuously evolve our programs to reflect real-world market conditions, integrating emerging financial technologies and methodologies.' },
 ];
 
 const team = [
@@ -31,7 +32,6 @@ const timeline = [
 export default function AboutPage() {
   return (
     <SiteLayout>
-      {/* Page hero — padded for fixed nav */}
       <div style={{ paddingTop: 68 }}>
         <PageHero
           title="About MCU Institute"
@@ -41,7 +41,6 @@ export default function AboutPage() {
         />
       </div>
 
-      {/* Mission / Vision / Innovation */}
       <section style={{ padding: '100px 0', background: '#fff' }}>
         <div className="container">
           <ScrollReveal>
@@ -64,7 +63,13 @@ export default function AboutPage() {
                   onMouseEnter={(e) => { const el = e.currentTarget; el.style.transform = 'translateY(-4px)'; el.style.boxShadow = '0 12px 32px rgba(0,0,0,0.08)'; el.style.background = '#fff'; }}
                   onMouseLeave={(e) => { const el = e.currentTarget; el.style.transform = 'translateY(0)'; el.style.boxShadow = 'none'; el.style.background = '#F8F8FA'; }}
                 >
-                  <div style={{ fontSize: 36, marginBottom: 20 }}>{v.icon}</div>
+                  <div style={{ width: 60, height: 60, borderRadius: 14,
+                    background: 'rgba(123,26,45,0.08)',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    marginBottom: 20,
+                  }}>
+                    <v.icon size={32} color="#7B1A2D" />
+                  </div>
                   <h3 style={{ fontSize: 22, fontWeight: 700, color: '#1A1A2A', marginBottom: 12 }}>{v.title}</h3>
                   <p style={{ fontSize: 15, color: '#666', lineHeight: 1.7 }}>{v.desc}</p>
                 </div>
@@ -74,10 +79,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Achievements */}
       <AchievementsSection />
 
-      {/* Timeline */}
       <section style={{ padding: '100px 0', background: '#fff' }}>
         <div className="container">
           <ScrollReveal>
@@ -113,7 +116,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Leadership team */}
       <section style={{ padding: '100px 0', background: '#F8F8FA' }}>
         <div className="container">
           <ScrollReveal>
@@ -142,7 +144,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Organization structure */}
       <section style={{ padding: '100px 0', background: '#fff' }}>
         <div className="container">
           <ScrollReveal>

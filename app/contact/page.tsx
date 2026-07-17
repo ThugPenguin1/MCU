@@ -3,13 +3,14 @@
 import SiteLayout from '@/components/SiteLayout';
 import PageHero from '@/components/PageHero';
 import ScrollReveal from '@/components/ScrollReveal';
+import { MapPinIcon, PhoneIcon, MailIcon, ClockIcon, CheckCircleIcon } from '@/components/Icons';
 import { useState } from 'react';
 
 const offices = [
-  { icon: '📍', label: 'Address', value: '25/F, 88 Lockhart Road, Wanchai, Hong Kong' },
-  { icon: '📞', label: 'Phone', value: '+(852) 2383 3232' },
-  { icon: '✉️', label: 'Email', value: 'info@mcuinstitute.com' },
-  { icon: '🕐', label: 'Office Hours', value: 'Mon–Fri: 9:00 am – 6:00 pm' },
+  { icon: MapPinIcon, label: 'Address', value: '25/F, 88 Lockhart Road, Wanchai, Hong Kong' },
+  { icon: PhoneIcon, label: 'Phone', value: '+(852) 2383 3232' },
+  { icon: MailIcon, label: 'Email', value: 'info@mcuinstitute.com' },
+  { icon: ClockIcon, label: 'Office Hours', value: 'Mon\u2013Fri: 9:00 am \u2013 6:00 pm' },
 ];
 
 export default function ContactPage() {
@@ -46,7 +47,6 @@ export default function ContactPage() {
         <div className="container">
           <div className="grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64 }}>
 
-            {/* Form */}
             <div>
               <ScrollReveal>
                 <div style={{ marginBottom: 40 }}>
@@ -61,7 +61,7 @@ export default function ContactPage() {
               {submitted ? (
                 <ScrollReveal>
                   <div style={{ padding: 40, borderRadius: 16, background: '#F8F8FA', border: '1px solid rgba(46,196,182,0.3)', textAlign: 'center' }}>
-                    <div style={{ fontSize: 48, marginBottom: 16 }}>✅</div>
+                    <div style={{ marginBottom: 16 }}><CheckCircleIcon size={48} color="#2EC4B6" /></div>
                     <h3 style={{ fontSize: 22, fontWeight: 700, color: '#1A1A2A', marginBottom: 8 }}>Message Sent!</h3>
                     <p style={{ fontSize: 15, color: '#666' }}>Thank you for reaching out. Our team will respond within one business day.</p>
                   </div>
@@ -71,55 +71,22 @@ export default function ContactPage() {
                   <div className="grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
                     <div>
                       <label style={labelStyle}>Full Name *</label>
-                      <input
-                        required
-                        type="text"
-                        placeholder="John Chan"
-                        style={inputStyle}
-                        value={form.name}
-                        onChange={(e) => setForm({ ...form, name: e.target.value })}
-                        onFocus={(e) => { e.target.style.borderColor = '#7B1A2D'; }}
-                        onBlur={(e) => { e.target.style.borderColor = 'rgba(0,0,0,0.12)'; }}
-                      />
+                      <input required type="text" placeholder="John Chan" style={inputStyle} value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} onFocus={(e) => { e.target.style.borderColor = '#7B1A2D'; }} onBlur={(e) => { e.target.style.borderColor = 'rgba(0,0,0,0.12)'; }} />
                     </div>
                     <div>
                       <label style={labelStyle}>Email Address *</label>
-                      <input
-                        required
-                        type="email"
-                        placeholder="john@example.com"
-                        style={inputStyle}
-                        value={form.email}
-                        onChange={(e) => setForm({ ...form, email: e.target.value })}
-                        onFocus={(e) => { e.target.style.borderColor = '#7B1A2D'; }}
-                        onBlur={(e) => { e.target.style.borderColor = 'rgba(0,0,0,0.12)'; }}
-                      />
+                      <input required type="email" placeholder="john@example.com" style={inputStyle} value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} onFocus={(e) => { e.target.style.borderColor = '#7B1A2D'; }} onBlur={(e) => { e.target.style.borderColor = 'rgba(0,0,0,0.12)'; }} />
                     </div>
                   </div>
                   <div className="grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
                     <div>
                       <label style={labelStyle}>Phone Number</label>
-                      <input
-                        type="tel"
-                        placeholder="+(852) 0000 0000"
-                        style={inputStyle}
-                        value={form.phone}
-                        onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                        onFocus={(e) => { e.target.style.borderColor = '#7B1A2D'; }}
-                        onBlur={(e) => { e.target.style.borderColor = 'rgba(0,0,0,0.12)'; }}
-                      />
+                      <input type="tel" placeholder="+(852) 0000 0000" style={inputStyle} value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} onFocus={(e) => { e.target.style.borderColor = '#7B1A2D'; }} onBlur={(e) => { e.target.style.borderColor = 'rgba(0,0,0,0.12)'; }} />
                     </div>
                     <div>
                       <label style={labelStyle}>Subject *</label>
-                      <select
-                        required
-                        style={{ ...inputStyle, cursor: 'pointer' }}
-                        value={form.subject}
-                        onChange={(e) => setForm({ ...form, subject: e.target.value })}
-                        onFocus={(e) => { e.target.style.borderColor = '#7B1A2D'; }}
-                        onBlur={(e) => { e.target.style.borderColor = 'rgba(0,0,0,0.12)'; }}
-                      >
-                        <option value="">Select a subject…</option>
+                      <select required style={{ ...inputStyle, cursor: 'pointer' }} value={form.subject} onChange={(e) => setForm({ ...form, subject: e.target.value })} onFocus={(e) => { e.target.style.borderColor = '#7B1A2D'; }} onBlur={(e) => { e.target.style.borderColor = 'rgba(0,0,0,0.12)'; }}>
+                        <option value="">Select a subject...</option>
                         <option>Course Enquiry</option>
                         <option>Partnership</option>
                         <option>Membership</option>
@@ -130,29 +97,13 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <label style={labelStyle}>Message *</label>
-                    <textarea
-                      required
-                      rows={6}
-                      placeholder="Tell us how we can help…"
-                      style={{ ...inputStyle, resize: 'vertical', lineHeight: 1.6 }}
-                      value={form.message}
-                      onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      onFocus={(e) => { e.target.style.borderColor = '#7B1A2D'; }}
-                      onBlur={(e) => { e.target.style.borderColor = 'rgba(0,0,0,0.12)'; }}
-                    />
+                    <textarea required rows={6} placeholder="Tell us how we can help..." style={{ ...inputStyle, resize: 'vertical', lineHeight: 1.6 }} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} onFocus={(e) => { e.target.style.borderColor = '#7B1A2D'; }} onBlur={(e) => { e.target.style.borderColor = 'rgba(0,0,0,0.12)'; }} />
                   </div>
-                  <button
-                    type="submit"
-                    className="btn-gold"
-                    style={{ justifyContent: 'center', border: 'none', cursor: 'pointer' }}
-                  >
-                    Send Message →
-                  </button>
+                  <button type="submit" className="btn-gold" style={{ justifyContent: 'center', border: 'none', cursor: 'pointer' }}>Send Message →</button>
                 </form>
               )}
             </div>
 
-            {/* Office info */}
             <div>
               <ScrollReveal>
                 <div style={{ marginBottom: 40 }}>
@@ -168,11 +119,8 @@ export default function ContactPage() {
                 {offices.map((o, i) => (
                   <ScrollReveal key={i} delay={i * 0.08} threshold={0.05}>
                     <div style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
-                      <div style={{
-                        width: 48, height: 48, borderRadius: 12, background: 'rgba(123,26,45,0.08)',
-                        display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 20, flexShrink: 0,
-                      }}>
-                        {o.icon}
+                      <div style={{ width: 48, height: 48, borderRadius: 12, background: 'rgba(123,26,45,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                        <o.icon size={20} color="#7B1A2D" />
                       </div>
                       <div>
                         <div style={{ fontSize: 12, fontWeight: 600, color: '#7B1A2D', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 4 }}>{o.label}</div>
@@ -183,21 +131,9 @@ export default function ContactPage() {
                 ))}
               </div>
 
-              {/* Map placeholder */}
               <ScrollReveal>
-                <div style={{
-                  width: '100%', aspectRatio: '4/3', borderRadius: 16, overflow: 'hidden',
-                  background: '#e8e8ec', position: 'relative',
-                }}>
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.8!2d114.173!3d22.277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404007b7a3d3a45%3A0x3db891e2b4a96e70!2s88%20Lockhart%20Rd%2C%20Wan%20Chai%2C%20Hong%20Kong!5e0!3m2!1sen!2shk!4v1"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0, position: 'absolute', inset: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    title="MCU Institute Location"
-                  />
+                <div style={{ width: '100%', aspectRatio: '4/3', borderRadius: 16, overflow: 'hidden', background: '#e8e8ec', position: 'relative' }}>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.8!2d114.173!3d22.277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404007b7a3d3a45%3A0x3db891e2b4a96e70!2s88%20Lockhart%20Rd%2C%20Wan%20Chai%2C%20Hong%20Kong!5e0!3m2!1sen!2shk!4v1" width="100%" height="100%" style={{ border: 0, position: 'absolute', inset: 0 }} allowFullScreen loading="lazy" title="MCU Institute Location" />
                 </div>
               </ScrollReveal>
             </div>

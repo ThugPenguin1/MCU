@@ -3,10 +3,12 @@
 import SiteLayout from '@/components/SiteLayout';
 import PageHero from '@/components/PageHero';
 import ScrollReveal from '@/components/ScrollReveal';
+import { ChartIcon, BriefcaseIcon, ColumnsIcon, LightbulbIcon } from '@/components/Icons';
+import React from 'react';
 
 const departments = [
   {
-    icon: '📊',
+    icon: ChartIcon,
     color: '#7B1A2D',
     name: 'Financial Planning',
     tagline: 'Foundation of Wealth',
@@ -14,7 +16,7 @@ const departments = [
     courses: ['Personal Financial Planning', 'Corporate Finance', 'Retirement Planning', 'Insurance & Risk Management'],
   },
   {
-    icon: '💼',
+    icon: BriefcaseIcon,
     color: '#E5A52E',
     name: 'Wealth Management',
     tagline: 'Growing & Protecting Assets',
@@ -22,7 +24,7 @@ const departments = [
     courses: ['Portfolio Management', 'Alternative Investments', 'Cross-Border Tax Planning', 'Estate & Succession'],
   },
   {
-    icon: '🏛️',
+    icon: ColumnsIcon,
     color: '#7B1A2D',
     name: 'Family Office',
     tagline: 'Multi-Generational Wealth',
@@ -30,23 +32,7 @@ const departments = [
     courses: ['Family Office Governance', 'Philanthropic Planning', 'Next-Gen Wealth', 'Family Constitution Design'],
   },
   {
-    icon: '🎓',
-    color: '#2EC4B6',
-    name: 'Professional Certification',
-    tagline: 'Recognized Credentials',
-    desc: 'Preparation programs for globally recognized certifications including CFP, CFA foundation, and Hong Kong-specific regulatory exams (HKSI, SFC licensing).',
-    courses: ['CFP Certification Prep', 'HKSI Paper 1–3', 'SFC Licensing Exam', 'CFA Level I Foundations'],
-  },
-  {
-    icon: '🌏',
-    color: '#E5A52E',
-    name: 'Greater Bay Area Studies',
-    tagline: 'Cross-Border Finance',
-    desc: 'Specialized programs on the Guangdong-Hong Kong-Macao Greater Bay Area — investment flows, regulatory frameworks, currency strategy, and HK–Mainland wealth linkage.',
-    courses: ['GBA Investment Strategy', 'Renminbi Wealth Products', 'Cross-Border Regulation', 'HK–Mainland Linkage'],
-  },
-  {
-    icon: '💡',
+    icon: LightbulbIcon,
     color: '#7B1A2D',
     name: 'Executive Leadership',
     tagline: 'For Senior Professionals',
@@ -62,7 +48,7 @@ export default function DepartmentsPage() {
         <PageHero
           title="Our Departments"
           subtitle="Academic Faculties"
-          description="Six specialized departments covering every dimension of financial education, from personal planning to family office governance."
+          description="Four specialized departments covering every dimension of financial education, from personal planning to family office governance."
           bgImage="https://mcuinstitute.com/wp-content/uploads/2025/04/pexels-armin-rimoldi-5553065-scaled.jpg"
         />
       </div>
@@ -92,15 +78,14 @@ export default function DepartmentsPage() {
                   onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(0,0,0,0.12)'; }}
                   onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 2px 20px rgba(0,0,0,0.06)'; }}
                 >
-                  {/* Color header band */}
                   <div style={{ height: 6, background: dept.color }} />
                   <div style={{ padding: 32 }}>
                     <div style={{
-                      width: 60, height: 60, borderRadius: 14, fontSize: 26,
+                      width: 60, height: 60, borderRadius: 14,
                       background: dept.color + '12', display: 'flex', alignItems: 'center',
                       justifyContent: 'center', marginBottom: 20,
                     }}>
-                      {dept.icon}
+                      <dept.icon size={28} color={dept.color} />
                     </div>
                     <p style={{ fontSize: 12, fontWeight: 600, color: dept.color, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 6 }}>{dept.tagline}</p>
                     <h3 style={{ fontSize: 20, fontWeight: 700, color: '#1A1A2A', marginBottom: 12 }}>{dept.name}</h3>
@@ -124,7 +109,6 @@ export default function DepartmentsPage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section style={{ padding: '80px 0', background: 'linear-gradient(135deg, #7B1A2D, rgba(123,26,45,0.87))', textAlign: 'center' }}>
         <div className="container">
           <ScrollReveal>
