@@ -15,7 +15,7 @@ const items = [
     title: 'Structured Flexibility',
     desc: 'Our programs combine rigorous academic structure with the freedom to customize your own learning path.',
     icon: GradCapIcon,
-    color: '#E5A52E',
+    color: '#7B1A2D',
   },
   {
     title: 'Best Practice Experience',

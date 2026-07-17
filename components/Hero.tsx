@@ -63,8 +63,8 @@ export default function Hero() {
             Comprehensive wealth management education and professional financial planning programs for tomorrow&apos;s leaders.
           </p>
           <div style={{ marginTop: 36, display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-            <a href="#about" className="btn-gold">Read More →</a>
-            <a href="#courses" className="btn-ghost">Explore Courses</a>
+            <a href="about" className="btn-gold">Read More →</a>
+            <a href="courses" className="btn-ghost">Explore Courses</a>
           </div>
         </div>
       </div>
