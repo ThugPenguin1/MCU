@@ -1,0 +1,195 @@
+'use client';
+
+import SiteLayout from '@/components/SiteLayout';
+import PageHero from '@/components/PageHero';
+import ScrollReveal from '@/components/ScrollReveal';
+
+const products = [
+  {
+    title: 'CFP Exam Preparation Bundle',
+    cat: 'Study Pack',
+    price: 'HK$1,280',
+    img: 'https://mcuinstitute.com/wp-content/uploads/2025/03/kindle-1867751_1280.jpg',
+    badge: 'Bestseller',
+    badgeColor: '#E5A52E',
+    desc: 'Comprehensive study pack including textbook, practice exams, flash cards, and 6-month online portal access.',
+  },
+  {
+    title: 'Wealth Management Handbook',
+    cat: 'Textbook',
+    price: 'HK$480',
+    img: 'https://mcuinstitute.com/wp-content/uploads/2025/02/AdobeStock_114954721-scaled-1.jpeg',
+    desc: 'The core reference text used across our Wealth Management programs, authored by MCU faculty.',
+  },
+  {
+    title: 'Family Office Blueprint',
+    cat: 'Digital Guide',
+    price: 'HK$320',
+    img: 'https://mcuinstitute.com/wp-content/uploads/2025/01/course2.jpg',
+    badge: 'New',
+    badgeColor: '#2EC4B6',
+    desc: 'A practical digital guide on structuring, governing, and operating a single-family office in Asia.',
+  },
+  {
+    title: 'Online Course Access — 1 Year',
+    cat: 'Subscription',
+    price: 'HK$3,600',
+    img: 'https://mcuinstitute.com/wp-content/uploads/2025/03/shutterstock_404074468.jpg',
+    badge: 'Most Popular',
+    badgeColor: '#7B1A2D',
+    desc: 'Unlimited access to all self-paced online courses for 12 months. Includes certificates of completion.',
+  },
+  {
+    title: 'HKSI Papers 1–3 Prep Kit',
+    cat: 'Study Pack',
+    price: 'HK$960',
+    img: 'https://mcuinstitute.com/wp-content/uploads/2025/01/course4.jpg',
+    desc: 'Full preparation package for HKSI licensing exams — notes, mock papers, and online Q&A sessions.',
+  },
+  {
+    title: 'Executive Finance Masterclass',
+    cat: 'Online Course',
+    price: 'HK$2,200',
+    img: 'https://mcuinstitute.com/wp-content/uploads/2025/01/course7.jpg',
+    desc: 'On-demand video masterclass for executives covering corporate finance, M&A basics, and treasury management.',
+  },
+  {
+    title: 'Financial Planning Case Studies',
+    cat: 'Case Book',
+    price: 'HK$240',
+    img: 'https://mcuinstitute.com/wp-content/uploads/2025/02/on-going-improvement-in-order-to-adapt-to-financial-market-with-uncertainty.png',
+    desc: '50 real-world financial planning case studies used in MCU classroom sessions — ideal for self-study.',
+  },
+  {
+    title: 'Certificate Frame & Engraving',
+    cat: 'Accessory',
+    price: 'HK$380',
+    img: 'https://mcuinstitute.com/wp-content/uploads/2025/01/course6.jpg',
+    desc: 'Premium A4 certificate frame with MCU branding and optional name engraving on a brass plate.',
+  },
+];
+
+export default function ShopPage() {
+  return (
+    <SiteLayout>
+      <div style={{ paddingTop: 68 }}>
+        <PageHero
+          title="MCU Institute Shop"
+          subtitle="Resources & Materials"
+          description="Study materials, course access packages, and professional resources to support your learning journey."
+          bgImage="https://mcuinstitute.com/wp-content/uploads/2025/03/shutterstock_404074468.jpg"
+        />
+      </div>
+
+      {/* Filter bar */}
+      <div style={{ background: '#fff', borderBottom: '1px solid rgba(0,0,0,0.06)', padding: '20px 0' }}>
+        <div className="container">
+          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center' }}>
+            <span style={{ fontSize: 13, fontWeight: 600, color: '#999', marginRight: 4 }}>Filter:</span>
+            {['All', 'Study Pack', 'Textbook', 'Digital Guide', 'Online Course', 'Subscription', 'Accessory'].map((cat) => (
+              <span
+                key={cat}
+                style={{
+                  padding: '6px 16px', borderRadius: 30, fontSize: 13, fontWeight: 500, cursor: 'pointer',
+                  background: cat === 'All' ? '#7B1A2D' : 'transparent',
+                  color: cat === 'All' ? '#fff' : '#666',
+                  border: `1.5px solid ${cat === 'All' ? '#7B1A2D' : 'rgba(0,0,0,0.1)'}`,
+                  transition: 'all 0.2s',
+                }}
+              >
+                {cat}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Products */}
+      <section style={{ padding: '80px 0', background: '#F8F8FA' }}>
+        <div className="container">
+          <div className="grid-4" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 28 }}>
+            {products.map((product, i) => (
+              <ScrollReveal key={i} delay={i * 0.05} threshold={0.1}>
+                <div style={{
+                  borderRadius: 16, background: '#fff', overflow: 'hidden',
+                  boxShadow: '0 2px 20px rgba(0,0,0,0.06)', transition: 'all 0.3s',
+                  display: 'flex', flexDirection: 'column',
+                }}
+                  onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(0,0,0,0.12)'; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 2px 20px rgba(0,0,0,0.06)'; }}
+                >
+                  {/* Image */}
+                  <div style={{ position: 'relative', overflow: 'hidden' }}>
+                    <div style={{ width: '100%', aspectRatio: '4/3', background: '#e8e8ec', overflow: 'hidden' }}>
+                      <img
+                        src={product.img}
+                        alt={product.title}
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                        onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                      />
+                    </div>
+                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.3) 0%, transparent 50%)' }} />
+                    {product.badge && (
+                      <div style={{
+                        position: 'absolute', top: 12, left: 12,
+                        background: product.badgeColor, color: '#fff',
+                        fontSize: 10, fontWeight: 700, padding: '4px 10px', borderRadius: 20,
+                        textTransform: 'uppercase', letterSpacing: '0.05em',
+                      }}>
+                        {product.badge}
+                      </div>
+                    )}
+                  </div>
+                  {/* Content */}
+                  <div style={{ padding: '20px 20px 24px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                    <span style={{ fontSize: 11, fontWeight: 600, color: '#7B1A2D', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>
+                      {product.cat}
+                    </span>
+                    <h3 style={{ fontSize: 15, fontWeight: 600, color: '#1A1A2A', lineHeight: 1.4, marginBottom: 8, flex: 1 }}>
+                      {product.title}
+                    </h3>
+                    <p style={{ fontSize: 13, color: '#666', lineHeight: 1.6, marginBottom: 16 }}>{product.desc}</p>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 'auto', paddingTop: 16, borderTop: '1px solid rgba(0,0,0,0.06)' }}>
+                      <span style={{ fontSize: 20, fontWeight: 700, color: '#1A1A2A' }}>{product.price}</span>
+                      <button
+                        style={{
+                          padding: '8px 18px', borderRadius: 30, fontSize: 13, fontWeight: 600,
+                          background: '#E5A52E', color: '#fff', border: 'none', cursor: 'pointer',
+                          transition: 'all 0.2s',
+                        }}
+                        onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.transform = 'translateY(-1px)'; (e.currentTarget as HTMLButtonElement).style.boxShadow = '0 4px 12px rgba(229,165,46,0.35)'; }}
+                        onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.transform = 'translateY(0)'; (e.currentTarget as HTMLButtonElement).style.boxShadow = 'none'; }}
+                      >
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Info strip */}
+      <section style={{ padding: '60px 0', background: '#fff' }}>
+        <div className="container">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 32, textAlign: 'center' }} className="achievements-grid">
+            {[
+              { icon: '🚚', title: 'Free Delivery', desc: 'On all physical orders over HK$500' },
+              { icon: '🔒', title: 'Secure Checkout', desc: 'SSL encrypted payment processing' },
+              { icon: '↩️', title: '14-Day Returns', desc: 'For unopened physical products' },
+              { icon: '💬', title: 'Support', desc: 'Mon–Fri 9am–6pm HKT' },
+            ].map((item, i) => (
+              <ScrollReveal key={i} delay={i * 0.08} threshold={0.1}>
+                <div style={{ fontSize: 32, marginBottom: 12 }}>{item.icon}</div>
+                <div style={{ fontSize: 15, fontWeight: 600, color: '#1A1A2A', marginBottom: 6 }}>{item.title}</div>
+                <div style={{ fontSize: 13, color: '#666' }}>{item.desc}</div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+    </SiteLayout>
+  );
+}
