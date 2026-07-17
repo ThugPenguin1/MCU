@@ -21,7 +21,7 @@ const programs = [
 const socials = [
   { label: 'Instagram', href: 'https://www.instagram.com/mcuinstitute', icon: InstagramIcon },
   { label: 'Facebook', href: 'https://www.facebook.com/mcuinstitute', icon: FacebookIcon },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/company/mcuinstitute', icon: LinkedInIcon },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/company/mcu-institute/', icon: LinkedInIcon },
 ];
 
 export default function Footer() {
