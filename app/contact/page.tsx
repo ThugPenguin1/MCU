@@ -39,7 +39,7 @@ export default function ContactPage() {
           title="Get In Touch"
           subtitle="Contact Us"
           description="We'd love to hear from you. Reach out for course enquiries, partnership discussions, or general questions."
-          bgImage="https://mcuinstitute.com/wp-content/uploads/2025/04/pexels-armin-rimoldi-5553065-scaled.jpg"
+          bgImage="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80"
         />
       </div>
 
@@ -99,7 +99,9 @@ export default function ContactPage() {
                     <label style={labelStyle}>Message *</label>
                     <textarea required rows={6} placeholder="Tell us how we can help..." style={{ ...inputStyle, resize: 'vertical', lineHeight: 1.6 }} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} onFocus={(e) => { e.target.style.borderColor = '#7B1A2D'; }} onBlur={(e) => { e.target.style.borderColor = 'rgba(0,0,0,0.12)'; }} />
                   </div>
-                  <button type="submit" className="btn-gold" style={{ justifyContent: 'center', border: 'none', cursor: 'pointer' }}>Send Message →</button>
+                  <button type="submit" className="btn-gold" style={{ justifyContent: 'center', border: 'none', cursor: 'pointer' }}>
+                    Send Message →
+                  </button>
                 </form>
               )}
             </div>
@@ -119,7 +121,10 @@ export default function ContactPage() {
                 {offices.map((o, i) => (
                   <ScrollReveal key={i} delay={i * 0.08} threshold={0.05}>
                     <div style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
-                      <div style={{ width: 48, height: 48, borderRadius: 12, background: 'rgba(123,26,45,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                      <div style={{
+                        width: 48, height: 48, borderRadius: 12, background: 'rgba(123,26,45,0.08)',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
+                      }}>
                         <o.icon size={20} color="#7B1A2D" />
                       </div>
                       <div>
@@ -132,8 +137,19 @@ export default function ContactPage() {
               </div>
 
               <ScrollReveal>
-                <div style={{ width: '100%', aspectRatio: '4/3', borderRadius: 16, overflow: 'hidden', background: '#e8e8ec', position: 'relative' }}>
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.8!2d114.173!3d22.277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404007b7a3d3a45%3A0x3db891e2b4a96e70!2s88%20Lockhart%20Rd%2C%20Wan%20Chai%2C%20Hong%20Kong!5e0!3m2!1sen!2shk!4v1" width="100%" height="100%" style={{ border: 0, position: 'absolute', inset: 0 }} allowFullScreen loading="lazy" title="MCU Institute Location" />
+                <div style={{
+                  width: '100%', aspectRatio: '4/3', borderRadius: 16, overflow: 'hidden',
+                  background: '#e8e8ec', position: 'relative',
+                }}>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.8!2d114.173!3d22.277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404007b7a3d3a45%3A0x3db891e2b4a96e70!2s88%20Lockhart%20Rd%2C%20Wan%20Chai%2C%20Hong%20Kong!5e0!3m2!1sen!2shk!4v1"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0, position: 'absolute', inset: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    title="MCU Institute Location"
+                  />
                 </div>
               </ScrollReveal>
             </div>

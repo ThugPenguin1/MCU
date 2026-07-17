@@ -15,9 +15,9 @@ const values = [
 ];
 
 const team = [
-  { name: 'Dr. Raymond Chan', role: 'Chief Executive Officer', img: 'https://mcuinstitute.com/wp-content/uploads/2025/02/happy-asian-boss-manager-business-man-wears-black-suit-relax-pose_264197-15946.avif' },
-  { name: 'Ms. Sarah Lam', role: 'Academic Director', img: 'https://mcuinstitute.com/wp-content/uploads/2025/02/1871775.jpg' },
-  { name: 'Mr. David Wong', role: 'Head of Curriculum', img: 'https://mcuinstitute.com/wp-content/uploads/2025/02/client3-1.jpg' },
+  { name: 'Dr. Raymond Chan', role: 'Chief Executive Officer', img: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80' },
+  { name: 'Ms. Sarah Lam', role: 'Academic Director', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80' },
+  { name: 'Mr. David Wong', role: 'Head of Curriculum', img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80' },
 ];
 
 const timeline = [
@@ -37,7 +37,7 @@ export default function AboutPage() {
           title="About MCU Institute"
           subtitle="Our Story"
           description="A pioneering institution dedicated to transforming financial education in Hong Kong and beyond since 2010."
-          bgImage="https://mcuinstitute.com/wp-content/uploads/2025/04/pexels-armin-rimoldi-5553065-scaled.jpg"
+          bgImage="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80"
         />
       </div>
 

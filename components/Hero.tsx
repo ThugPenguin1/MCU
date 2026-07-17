@@ -15,13 +15,13 @@ export default function Hero() {
       {/* Ken Burns background */}
       <div style={{ position: 'absolute', inset: 0, animation: 'kenburns 25s ease-in-out infinite alternate' }}>
         <img
-          src="https://mcuinstitute.com/wp-content/uploads/2025/04/pexels-element5-1370296-scaled.jpg"
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&q=80"
           alt="Education"
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
       </div>
 
-      {/* Overlay — right-aligned hero */}
+      {/* Overlay */}
       <div style={{
         position: 'absolute', inset: 0,
         background: 'linear-gradient(to left, rgba(60,10,20,0.94) 0%, rgba(90,18,32,0.8) 40%, rgba(123,26,45,0.45) 100%)',

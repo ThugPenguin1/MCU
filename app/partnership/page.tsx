@@ -3,35 +3,37 @@
 import SiteLayout from '@/components/SiteLayout';
 import PageHero from '@/components/PageHero';
 import ScrollReveal from '@/components/ScrollReveal';
+import { BankIcon, BuildingIcon, GlobeIcon, GradCapIcon, UsersIcon, HandshakeIcon } from '@/components/Icons';
+import React from 'react';
 
 const partnerTypes = [
   {
-    icon: '🏦',
+    icon: BankIcon,
     title: 'Financial Institutions',
     desc: 'Banks, securities firms, and insurance companies partner with us to upskill their advisors and relationship managers with cutting-edge financial planning credentials.',
   },
   {
-    icon: '🏢',
+    icon: BuildingIcon,
     title: 'Corporate Employers',
     desc: 'HR departments and L&D teams use our programs as part of employee benefits packages, succession planning, and executive development tracks.',
   },
   {
-    icon: '🌐',
+    icon: GlobeIcon,
     title: 'Professional Associations',
     desc: 'Industry bodies and professional associations co-brand continuing education programs and CPD point schemes with our academic content.',
   },
   {
-    icon: '🎓',
+    icon: GradCapIcon,
     title: 'Academic Institutions',
     desc: 'Universities and polytechnics collaborate with us on credit recognition, dual-certification programs, and joint curriculum development.',
   },
   {
-    icon: '👨‍👩‍👧‍👦',
+    icon: UsersIcon,
     title: 'Family Offices',
     desc: 'Single and multi-family offices engage us for proprietary education programs to prepare the next generation of principal family members.',
   },
   {
-    icon: '🤝',
+    icon: HandshakeIcon,
     title: 'Referral Partners',
     desc: 'Financial advisors, wealth managers, and independent professionals refer clients and earn commissions or CPD recognition for qualified referrals.',
   },
@@ -56,11 +58,10 @@ export default function PartnershipPage() {
           title="Partnership Opportunities"
           subtitle="Collaborate With Us"
           description="Join a growing network of institutions that trust MCU Institute to elevate the financial literacy of their people."
-          bgImage="https://mcuinstitute.com/wp-content/uploads/2025/04/pexels-armin-rimoldi-5553065-scaled.jpg"
+          bgImage="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80"
         />
       </div>
 
-      {/* Partner types */}
       <section style={{ padding: '100px 0', background: '#fff' }}>
         <div className="container">
           <ScrollReveal>
@@ -83,7 +84,14 @@ export default function PartnershipPage() {
                   onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 12px 32px rgba(0,0,0,0.08)'; e.currentTarget.style.background = '#fff'; }}
                   onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.background = '#F8F8FA'; }}
                 >
-                  <div style={{ fontSize: 36, marginBottom: 16 }}>{p.icon}</div>
+                  <div style={{
+                    width: 56, height: 56, borderRadius: 14,
+                    background: 'rgba(123,26,45,0.08)',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    marginBottom: 20,
+                  }}>
+                    <p.icon size={26} color="#7B1A2D" />
+                  </div>
                   <h3 style={{ fontSize: 19, fontWeight: 600, color: '#1A1A2A', marginBottom: 10 }}>{p.title}</h3>
                   <p style={{ fontSize: 14, color: '#666', lineHeight: 1.7 }}>{p.desc}</p>
                 </div>
@@ -93,14 +101,13 @@ export default function PartnershipPage() {
         </div>
       </section>
 
-      {/* Benefits */}
       <section style={{ padding: '100px 0', background: '#F8F8FA' }}>
         <div className="container">
           <div className="grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
             <div>
               <div style={{ width: '100%', aspectRatio: '4/3', borderRadius: 20, overflow: 'hidden', background: '#e8e8ec' }}>
                 <img
-                  src="https://mcuinstitute.com/wp-content/uploads/2025/04/pexels-armin-rimoldi-5553065-scaled.jpg"
+                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80"
                   alt="Partnership"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
@@ -132,7 +139,6 @@ export default function PartnershipPage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section style={{ padding: '80px 0', background: 'linear-gradient(135deg, #7B1A2D, rgba(123,26,45,0.87))', textAlign: 'center' }}>
         <div className="container">
           <ScrollReveal>

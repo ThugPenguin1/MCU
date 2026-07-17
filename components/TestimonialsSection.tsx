@@ -9,21 +9,21 @@ const testimonials = [
     location: 'London',
     quote: 'Love the flexibility',
     body: 'Happy with the flexibility of the lesson as we can choose online or classroom learning.',
-    img: 'https://mcuinstitute.com/wp-content/uploads/2025/02/1871775.jpg',
+    img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80',
   },
   {
     name: 'John',
     location: 'Hong Kong',
     quote: 'Excellent Course',
     body: 'The courses are brilliant! I really learn some practical knowledge to help me solve real-life problems.',
-    img: 'https://mcuinstitute.com/wp-content/uploads/2025/02/happy-asian-boss-manager-business-man-wears-black-suit-relax-pose_264197-15946.avif',
+    img: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80',
   },
   {
     name: 'Carol',
     location: 'New Zealand',
     quote: 'Fantastic quality',
     body: 'I really appreciate the quality of the learning materials and the teaching team.',
-    img: 'https://mcuinstitute.com/wp-content/uploads/2025/02/client3-1.jpg',
+    img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80',
   },
 ];
 

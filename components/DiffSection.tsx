@@ -29,7 +29,7 @@ export default function DiffSection() {
   return (
     <section id="diff">
       <PhotoBanner
-        src="https://mcuinstitute.com/wp-content/uploads/2025/04/pexels-armin-rimoldi-5553065-scaled.jpg"
+        src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80"
         title="What Makes Us Different"
         subtitle="Our Approach"
         height={300}

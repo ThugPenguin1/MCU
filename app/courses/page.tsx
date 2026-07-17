@@ -7,7 +7,7 @@ import ScrollReveal from '@/components/ScrollReveal';
 const courses = [
   {
     cat: 'Financial Planning',
-    img: 'https://mcuinstitute.com/wp-content/uploads/2025/01/course4.jpg',
+    img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80',
     title: 'Professional Financial Planning Program',
     level: 'Foundation – Advanced',
     duration: '12 weeks',
@@ -16,7 +16,7 @@ const courses = [
   },
   {
     cat: 'Wealth Management',
-    img: 'https://mcuinstitute.com/wp-content/uploads/2025/01/course7.jpg',
+    img: 'https://images.unsplash.com/photo-1551836022-4c4c79ecde51?w=800&q=80',
     title: 'CEO Wealth Management Program',
     level: 'Executive',
     duration: '8 weeks',
@@ -25,7 +25,7 @@ const courses = [
   },
   {
     cat: 'Family Office',
-    img: 'https://mcuinstitute.com/wp-content/uploads/2025/01/course2.jpg',
+    img: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80',
     title: 'Family Office Wealth Management Program',
     level: 'Intermediate – Advanced',
     duration: '16 weeks',
@@ -34,7 +34,7 @@ const courses = [
   },
   {
     cat: 'Family Office',
-    img: 'https://mcuinstitute.com/wp-content/uploads/2025/01/course6.jpg',
+    img: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80',
     title: 'Professional Family Office Consultant Program',
     level: 'Advanced',
     duration: '20 weeks',
@@ -43,7 +43,7 @@ const courses = [
   },
   {
     cat: 'Financial Planning',
-    img: 'https://mcuinstitute.com/wp-content/uploads/2025/03/kindle-1867751_1280.jpg',
+    img: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&q=80',
     title: 'Personal Investment Planning',
     level: 'Foundation',
     duration: '6 weeks',
@@ -52,7 +52,7 @@ const courses = [
   },
   {
     cat: 'Wealth Management',
-    img: 'https://mcuinstitute.com/wp-content/uploads/2025/02/on-going-improvement-in-order-to-adapt-to-financial-market-with-uncertainty.png',
+    img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
     title: 'Alternative Investment Strategies',
     level: 'Intermediate',
     duration: '10 weeks',
@@ -61,7 +61,7 @@ const courses = [
   },
   {
     cat: 'Executive',
-    img: 'https://mcuinstitute.com/wp-content/uploads/2025/03/shutterstock_404074468.jpg',
+    img: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1600&q=80',
     title: 'Executive Finance Leadership',
     level: 'Executive',
     duration: '6 weeks',
@@ -87,7 +87,7 @@ export default function CoursesPage() {
           title="All Courses & Programs"
           subtitle="Programs"
           description="From foundation certificates to executive masterclasses — find the program that matches your career stage and goals."
-          bgImage="https://mcuinstitute.com/wp-content/uploads/2025/03/shutterstock_404074468.jpg"
+          bgImage="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1600&q=80"
         />
       </div>
 

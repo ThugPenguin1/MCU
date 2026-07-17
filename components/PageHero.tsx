@@ -9,7 +9,7 @@ export default function PageHero({
   title,
   subtitle,
   description,
-  bgImage = 'https://mcuinstitute.com/wp-content/uploads/2025/04/pexels-element5-1370296-scaled.jpg',
+  bgImage = 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&q=80',
 }: PageHeroProps) {
   return (
     <section style={{ position: 'relative', height: 400, overflow: 'hidden', marginTop: 0 }}>

@@ -7,17 +7,17 @@ const cards = [
   {
     title: 'Continuous Training',
     desc: 'Focus on upgrading wealth management and financial planning knowledge and skills.',
-    img: 'https://mcuinstitute.com/wp-content/uploads/2025/03/kindle-1867751_1280.jpg',
+    img: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&q=80',
   },
   {
     title: 'On-going Improvement',
     desc: 'All courses are modified regularly to align to the trend and direction of the global economy.',
-    img: 'https://mcuinstitute.com/wp-content/uploads/2025/02/on-going-improvement-in-order-to-adapt-to-financial-market-with-uncertainty.png',
+    img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
   },
   {
     title: 'Implementation of Learning',
     desc: 'Emphasis is placed on the application of knowledge and realization of ideas.',
-    img: 'https://mcuinstitute.com/wp-content/uploads/2025/02/AdobeStock_114954721-scaled-1.jpeg',
+    img: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80',
   },
 ];
 

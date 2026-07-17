@@ -6,19 +6,19 @@ import ScrollReveal from './ScrollReveal';
 const courses = [
   {
     title: 'Professional Financial Planning Program',
-    img: 'https://mcuinstitute.com/wp-content/uploads/2025/01/course4.jpg',
+    img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80',
   },
   {
     title: 'CEO Wealth Management Program',
-    img: 'https://mcuinstitute.com/wp-content/uploads/2025/01/course7.jpg',
+    img: 'https://images.unsplash.com/photo-1551836022-4c4c79ecde51?w=800&q=80',
   },
   {
     title: 'Family Office Wealth Management Program',
-    img: 'https://mcuinstitute.com/wp-content/uploads/2025/01/course2.jpg',
+    img: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80',
   },
   {
     title: 'Professional Family Office Consultant Program',
-    img: 'https://mcuinstitute.com/wp-content/uploads/2025/01/course6.jpg',
+    img: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80',
   },
 ];
 
@@ -26,7 +26,7 @@ export default function CoursesSection() {
   return (
     <section id="courses">
       <PhotoBanner
-        src="https://mcuinstitute.com/wp-content/uploads/2025/03/shutterstock_404074468.jpg"
+        src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1600&q=80"
         title="Popular Courses"
         subtitle="Programs"
         height={280}

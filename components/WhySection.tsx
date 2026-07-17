@@ -23,7 +23,7 @@ export default function WhySection() {
           <div>
             <div style={{ width: '100%', aspectRatio: '4/3', borderRadius: 20, overflow: 'hidden', background: '#e8e8ec' }}>
               <img
-                src="https://mcuinstitute.com/wp-content/uploads/2025/03/shutterstock_404074468.jpg"
+                src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1600&q=80"
                 alt="Students learning"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}

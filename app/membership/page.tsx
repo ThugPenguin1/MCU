@@ -71,11 +71,10 @@ export default function MembershipPage() {
           title="Join Our Membership"
           subtitle="Community"
           description="Be part of a thriving professional community of wealth managers, financial planners, and next-generation leaders."
-          bgImage="https://mcuinstitute.com/wp-content/uploads/2025/04/pexels-element5-1370296-scaled.jpg"
+          bgImage="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&q=80"
         />
       </div>
 
-      {/* Tiers */}
       <section style={{ padding: '100px 0', background: '#fff' }}>
         <div className="container">
           <ScrollReveal>
@@ -147,7 +146,6 @@ export default function MembershipPage() {
         </div>
       </section>
 
-      {/* Join Club section */}
       <section id="join" style={{ padding: '100px 0', background: '#F8F8FA' }}>
         <div className="container">
           <div className="grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
@@ -181,7 +179,7 @@ export default function MembershipPage() {
             <div>
               <div style={{ width: '100%', aspectRatio: '4/3', borderRadius: 20, overflow: 'hidden', background: '#e8e8ec' }}>
                 <img
-                  src="https://mcuinstitute.com/wp-content/uploads/2025/03/shutterstock_404074468.jpg"
+                  src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1600&q=80"
                   alt="MCU Club"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
