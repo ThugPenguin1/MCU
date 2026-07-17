@@ -17,7 +17,7 @@ const departments = [
   },
   {
     icon: BriefcaseIcon,
-    color: '#E5A52E',
+    color: '#7B1A2D',
     name: 'Wealth Management',
     tagline: 'Growing & Protecting Assets',
     desc: 'Focused on high-net-worth client servicing, portfolio construction, alternative investments, and cross-border estate planning. Ideal for banking professionals and private client advisors.',

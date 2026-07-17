@@ -41,33 +41,6 @@ const courses = [
     format: 'Online',
     desc: 'For professional advisors serving family offices — covers legal, tax, investment, and relationship management complexities.',
   },
-  {
-    cat: 'Financial Planning',
-    img: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&q=80',
-    title: 'Personal Investment Planning',
-    level: 'Foundation',
-    duration: '6 weeks',
-    format: 'Online',
-    desc: 'An entry-level course for individuals wanting to take control of their personal finances and investment portfolio.',
-  },
-  {
-    cat: 'Wealth Management',
-    img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
-    title: 'Alternative Investment Strategies',
-    level: 'Intermediate',
-    duration: '10 weeks',
-    format: 'Hybrid',
-    desc: 'Explores private equity, hedge funds, real assets, and structured products as part of a diversified portfolio.',
-  },
-  {
-    cat: 'Executive',
-    img: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1600&q=80',
-    title: 'Executive Finance Leadership',
-    level: 'Executive',
-    duration: '6 weeks',
-    format: 'Classroom',
-    desc: 'Board-level financial literacy and governance — designed around the schedules and priorities of C-suite leaders.',
-  },
 ];
 
 const categories = ['All', 'Financial Planning', 'Wealth Management', 'Family Office', 'Executive'];
