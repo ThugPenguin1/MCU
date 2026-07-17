@@ -33,7 +33,7 @@ export default function Footer() {
           style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr 1fr 1fr', gap: 48, paddingBottom: 48 }}
         >
           <div>
-            <Logo size={44} variant="light" />
+            <Logo size={200} variant="light" />
             <p style={{
               fontSize: 14, color: 'rgba(255,255,255,0.5)',
               lineHeight: 1.7, marginTop: 16, maxWidth: 280,
