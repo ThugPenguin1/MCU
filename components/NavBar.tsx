@@ -156,7 +156,7 @@ export default function NavBar() {
               >
                 {item.label}
                 {item.children && (
-                  <span style={{ marginLeft: 4, fontSize: 11 }}>▾</span>
+                  <span style={{ marginLeft: 4, fontSize: 11 }}></span>
                 )}
               </Link>
               {item.children && (
